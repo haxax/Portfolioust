@@ -17,6 +17,7 @@ MonoBehaviour:
     preload: 1
   cards:
   - {fileID: 11400000, guid: 06ee3e20b3ef755438cfc127a71025f8, type: 2}
+  - {fileID: 11400000, guid: 06ee3e20b3ef755438cfc127a71025f8, type: 2}
   onlineDeck:
     overrideDefaultDeck: 1
     sheetId: 1pGsNwsTJ3mwMD0Nbge0Zb0UvZLQVv2m0phJGorZ5vu0

@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f813b596ccb3ab34192b7fff5e5faac4, type: 3}
   m_Name: CardPrefabs
   m_EditorClassIdentifier: 
-  cards: []
+  cards:
+  - {fileID: 4075674303321697147, guid: d4a228f12f5c4074fbb47ac8e581d22c, type: 3}
+  - {fileID: 4818949518705885086, guid: 60a2d1f18d698e446a68299505ae1bfd, type: 3}
+  - {fileID: 2664292079800218445, guid: 80547d0834e0bdb40aa2f951c16ce463, type: 3}

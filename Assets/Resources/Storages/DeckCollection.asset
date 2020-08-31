@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef1f74d34258084a8631e82f1b4e6f0, type: 3}
   m_Name: DeckCollection
   m_EditorClassIdentifier: 
+  deckPrefab: {fileID: 8276826808258574701, guid: 380b520ae135b144ea590c9b7f30a0ca,
+    type: 3}
   decks:
   - {fileID: 11400000, guid: 53aa9a5abc3cd304a94accad181903ec, type: 2}
   - {fileID: 11400000, guid: 9c8a368b0377cd34dae58285b3ecdb87, type: 2}

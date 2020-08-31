@@ -15,7 +15,7 @@ public static class ExtensionsObject
     }
 
     /// <summary>
-    /// If GetComponent is unable to find the Component, tries to find from scene
+    /// If GetComponent is unable to find a Component, tries to find from scene
     /// </summary>
     static public T GetOrFindComponent<T>(this GameObject gameObject) where T : Component
     {

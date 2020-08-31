@@ -5,6 +5,9 @@ using UnityEngine;
 
 public static class ExtensionsType
 {
+    /// <summary>
+    /// Sets value only if the array is long enough
+    /// </summary>
     public static void SafeSet<T>(this T[] array, int id, ref T var)
     {
         if (array.Length <= id) { return; }

@@ -6,6 +6,13 @@ public class CardScroller : Scroller1D
 {
     public float Height { get; set; } = 1500f;
     public float Position { get; private set; } = 750f;
+    
+    [HideInInspector] [SerializeField] private RectMover testMover;
+    void OnValidate()
+    {
+        this.ValidateComponent(ref testMover);
+    }
+
     public void AddPosition(float amount)
     {
         Position = Mathf.Clamp(Position + amount, 0.0f, Height);
@@ -14,6 +21,6 @@ public class CardScroller : Scroller1D
     protected override void OnUpdate(float change)
     {
         AddPosition(change);
-        GetComponent<RectMover>().UpdatePosition(Position, Height);
+        testMover.UpdatePosition(Position, Height);
     }
 }

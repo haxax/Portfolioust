@@ -6,6 +6,14 @@ public class DeckScroller : Scroller1D
 {
     public float Width { get; set; } = 1500f;
     public float Position { get; private set; } = 750f;
+
+    [HideInInspector] [SerializeField] private RectMover testMover;
+
+    void OnValidate()
+    {
+        this.ValidateComponent(ref testMover);
+    }
+
     public void AddPosition(float amount)
     {
         Position = Mathf.Repeat(Position + amount, Width);
@@ -14,6 +22,6 @@ public class DeckScroller : Scroller1D
     protected override void OnUpdate(float change)
     {
         AddPosition(change);
-        GetComponent<RectMover>().UpdatePosition(Position, Width);
+        testMover.UpdatePosition(Position, Width);
     }
 }

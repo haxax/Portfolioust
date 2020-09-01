@@ -347,7 +347,7 @@ MonoBehaviour:
   _persistent: 0
   isOn: 1
   deckPanel: {fileID: 1214397508}
-  asdg:
+  tempGlobalScriptableObjectList:
   - {fileID: 11400000, guid: a765fa72a1a5363459bc59448153b9af, type: 2}
   - {fileID: 11400000, guid: fccbd6b96a313494c8e14f0d6a719119, type: 2}
   - {fileID: 11400000, guid: ef240a5192fb991419376f40907021c5, type: 2}
@@ -462,7 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _persistent: 0
-  activeProfile: {fileID: 11400000, guid: 3d8e68570e9c1994ab7700f72d902313, type: 2}
+  activeProfile: {fileID: 11400000, guid: 15fe646f6aa4089488d5db4d0d9b027d, type: 2}
 --- !u!1 &653949700
 GameObject:
   m_ObjectHideFlags: 0

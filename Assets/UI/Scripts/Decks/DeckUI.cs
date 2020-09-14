@@ -62,4 +62,23 @@ public class DeckUI : MonoBehaviour
 
         RectBody.anchoredPosition = RectBody.anchoredPosition.ChangeY(yPos);
     }
+
+    public void OpenDeck()
+    {
+        DeckManager.Instance.OpenDeck(this.Deck);
+        EnableCards(true);
+    }
+
+    public void CloseDeck()
+    {
+        EnableCards(false);
+    }
+
+    private void EnableCards(bool state)
+    {
+        for (int i = 0; i < Deck.Cards.Count; i++)
+        {
+            Deck.Cards[i].CardUI().EnableCard(state);
+        }
+    }
 }

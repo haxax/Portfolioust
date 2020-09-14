@@ -69,6 +69,10 @@ public class Deck : MonoBehaviour
         for (int i = 0; i < _cards.Count; i++)
         { CreateNewCard(_cards[i]); }
 
+        // Activate default deck at the start
+        if (DeckManager.Instance.ActiveDeck == this)
+        { DeckUI.OpenDeck(); }
+
         DeckUI.UpdateUI();
     }
 
@@ -80,6 +84,7 @@ public class Deck : MonoBehaviour
     {
         Card newCard = Instantiate(CardPrefabStorage.Instance.FindCardPrefabOfType(cardData.GetCardDataType()), CardManager.Instance.CardPanel);
         newCard.SetupCard(cardData);
+        newCard.CardUI().EnableCard(false);
         Cards.Add(newCard);
     }
 

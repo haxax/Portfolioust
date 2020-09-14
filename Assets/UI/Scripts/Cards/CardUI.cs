@@ -13,4 +13,9 @@ public abstract class CardUI : MonoBehaviour
 
     public void UpdateGameObjectName()
     { gameObject.name = Card().GetCardType() + "_" + Card().GetData().GetCardName(); }
+
+    public virtual void EnableCard(bool state)
+    {
+        gameObject.SetActive(state);
+    }
 }

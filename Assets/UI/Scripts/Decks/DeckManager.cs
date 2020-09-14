@@ -12,6 +12,9 @@ public class DeckManager : Singleton<DeckManager>
     [Tooltip("Static scriptableobjects which must exist")]
     [SerializeField] private List<ScriptableObject> tempGlobalScriptableObjectList = new List<ScriptableObject>();
 
+    private Deck activeDeck = null;
+    public Deck ActiveDeck { get; private set; }
+
     /// <summary>
     /// Loaded decks
     /// </summary>
@@ -55,6 +58,8 @@ public class DeckManager : Singleton<DeckManager>
             newDeck.Setup(DeckCollectionStorage.Instance.Decks[i], i);
             Decks.Add(newDeck);
         }
+
+        ActiveDeck = Decks[0];
     }
 
     /// <summary>
@@ -67,5 +72,11 @@ public class DeckManager : Singleton<DeckManager>
             Decks[i].DestroyDeck();
         }
         Decks = new List<Deck>();
+    }
+
+    public void OpenDeck(Deck deck)
+    {
+        if (activeDeck != null && activeDeck != deck) { activeDeck.DeckUI.CloseDeck(); }
+        activeDeck = deck;
     }
 }
